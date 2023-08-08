@@ -1,11 +1,23 @@
 
 const mimeTypes = require('mime-types')
 const multer = require('multer');
-const Image = require('../models/imageSchema')
+const Image = require('../models/imageSchema');
+const { json } = require('express');
 
 
 
 const controller = {}
+
+controller.getPagina  = (req, res) => {
+  res.render("pagina")
+  
+}
+
+
+controller.getJSON  = (req, res) => {
+  res.send({status:"todo bien"})
+ 
+}
 
 controller.index = (req, res) => {
   res.send('respuesta desde el servidor');

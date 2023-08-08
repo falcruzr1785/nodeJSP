@@ -22,7 +22,8 @@ router.post('/upload', upload.single('imagen'), require('../controllers/index.co
   router.post('/image',require('../controllers/index.controllers.js').image )
   router.post('/prueba',require('../controllers/index.controllers.js').getPrueba )
   router.get('/images',require('../controllers/index.controllers.js').images )
- 
+  router.get('/pagina',require('../controllers/index.controllers.js').getPagina ) 
+  router.get('/getJSON',require('../controllers/index.controllers.js').getJSON ) 
 
 
 
