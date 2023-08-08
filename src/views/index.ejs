@@ -1,0 +1,40 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>inDEX</title>
+</head>
+<body>   
+    <button id="buttonMenssage" onclick="changeColor()"> press</button>
+
+    <div>
+        <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" alt="">
+        <form action="/api/upload" method="post"  enctype="multipart/form-data"  >
+            <div>
+                <label for="filename">Nombre de archivo</label>
+               <!--  <input type="text" id="filename" name="filename" /> -->
+               <input type="file" name="imagen" id="imagen">
+            </div>
+            <div>
+            <!-- <input type="file" name="image2" id="image2" multiple> -->
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+        <div>
+            <a title="boton" href="/api/images"> ir a ver imagenes </a>
+        
+        </div>
+    </div>
+   
+
+
+    
+ 
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
+   
+   

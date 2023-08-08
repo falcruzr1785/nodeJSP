@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File recibe</title>
+</head>
+<body>
+    <div>
+        <a title="boton" href="/api/images"> ir a ver imagenes </a>
+    
+    </div>
+
+    <input type="text" name="id1" id="id1">
+  <% images.forEach(image => { %>
+    
+     <input type="text" name="id" id="id"  value="<%=image._id%>">
+  <% }) %>
+    <h1>  </h1>
+
+    <script type="text/javascript" src="./motorcito.js"></script>
+</body>
+</html>

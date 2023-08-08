@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes</title>
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <a title=" index" href="/api/index"> ir a Index  </a>
+    <% images.forEach(function(image) { %>
+        <div class="image-box">
+            <div class="image-name"><%= image.name %></div>
+            <% if (image.data) { %>
+            <img class="image-content" title="<%= image._id %>" src="data:<%= image.contentType %>;base64,<%= image.data.toString('base64') %>"  > 
+         
+            <form action="/api/image" method="POST">
+                <input type="hidden" name="imageId" value="<%= image._id %>">
+                <button type="submit">ver en otra pestaña</button>
+              </form>         
+         
+            <% } %>
+        </div>
+    <% }); %>
+
+
+    <script>
+      
+    </script>
+</body>
+</html>
+
+

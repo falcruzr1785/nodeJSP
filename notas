@@ -1,0 +1,17 @@
+ <img src="data:<%= image.contentType %> ;base64,<%= image.data.toString('base64') %>" alt="<%= image.name %>">
+
+
+ ///en el formulario para subir imagenes o archivos 
+ utilizar enctype="multipart/form-data" cuando se trabaja con formularios que contienen campos de archivo (<input type="file">)
+
+
+
+
+ hay dos tipos de guardar en muter:
+ multer.memoryStorage guarda en el disco
+ en cambio  multer.dest y multer.diskStorage almacenamiento en memoria para acceder al buffer del archivo
+
+
+
+ --
+ Cuando se utiliza una ruta con get es cuando solo es necesario mostrar desde el servidor, cuando se usa POST es cuando se deben recibir algun valor desde el frontend

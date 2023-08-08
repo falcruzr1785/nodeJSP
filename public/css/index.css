@@ -1,0 +1,15 @@
+.image-box {
+    display: inline-block;
+    margin: 100px;
+    border: 1px solid rgb(139, 35, 35);
+    padding: 10px;
+}
+.image-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.image-content {
+    width: 200px;
+    height: 200px;
+}
+body { background-color: #D8D8D8;color: #444;}

@@ -1,0 +1,11 @@
+///conexion a Base de Datos
+const mongoose = require('mongoose');
+//const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.xkyfv4a.mongodb.net/DBimages?retryWrites=true&w=majority`;
+
+const uri = `mongodb://127.0.0.1:27017/ImagesBD`;
+mongoose.connect(uri,
+  { useNewUrlParser: true, useUnifiedTopology: true  }
+)
+  .then(() => console.log('Base de datos conectada'))  
+  .catch(e => console.log(e)) 
+/////////////////////////////////////////////////////////
