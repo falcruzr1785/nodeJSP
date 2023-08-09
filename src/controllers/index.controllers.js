@@ -20,7 +20,7 @@ controller.getJSON  = (req, res) => {
 }
 
 controller.index = (req, res) => {
- res.render('index');
+ res.render('index.ejs');
 }
 
 
