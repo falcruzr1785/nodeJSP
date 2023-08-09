@@ -103,7 +103,7 @@ controller.delete = async (req, res) => {
     const imageId = req.body.imageId;
     // Eliminar la imagen por su ID en la base de datos
     if (!imageId) {
-      return res.status(404).send('Imagen no encontrada');
+      return res.status(404).send('Imagen fue encontrada');
     }
     console.log(`imagen borrada ` + req.body.imageId)
     const result = await Image.findByIdAndDelete(imageId);
