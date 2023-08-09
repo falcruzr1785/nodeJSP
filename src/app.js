@@ -10,7 +10,7 @@ require(`dotenv`).config();
 //a partir de Express 4.16.0 se usa express.urlencoded({ extended: true }))
 
 
-app.use(cors());
+app.use(cors({origin: true}));
 
 ////const { bd } = require('../BD/connectionBD')
 const bd = require("../BD/connectionBD");
