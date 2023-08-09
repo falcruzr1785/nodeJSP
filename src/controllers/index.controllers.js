@@ -73,7 +73,7 @@ controller.images = async (req, res) => {
     const images = await Image.find({});
 
     if (!images ) {
-      return res.status(404).send('Imagen no encontrada');
+      return res.status(404).send('Imagen no encontrada.');
     }
   ////ruta para ver imagenes por medio de un arreglo
      // Suponiendo que la imagen está almacenada en la base de datos como un campo "data"
