@@ -78,9 +78,19 @@ controller.images = async (req, res) => {
 
      // Suponiendo que la imagen está almacenada en la base de datos como un campo "data"
     // y que su tipo MIME es "image/jpeg"
-    const imageData = images[0].data;
-    res.setHeader('Content-Type', 'image/jpeg');
-    res.send(imageData);
+     // Crear un arreglo para almacenar las imágenes en formato base64
+     const imageArray = [];
+
+     // Recorrer todas las imágenes y agregar sus datos al arreglo
+     images.forEach(image => {
+       imageArray.push(image.data);
+     });
+ 
+     // Ajustar el Content-Type según el tipo MIME correcto de las imágenes en tu base de datos
+     res.setHeader('Content-Type', 'image/jpeg');
+ 
+     // Enviar el arreglo de imágenes como respuesta
+     res.send(imageArray);
     
   } catch (err) {
     console.error('Error al obtener las imágenes:', err);
