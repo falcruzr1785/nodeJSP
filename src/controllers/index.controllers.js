@@ -20,8 +20,7 @@ controller.getJSON  = (req, res) => {
 }
 
 controller.index = (req, res) => {
-  res.send('respuesta desde el servidor');
-  //res.render('index');
+ res.render('index');
 }
 
 
@@ -73,7 +72,7 @@ controller.images = async (req, res) => {
   try {
     const images = await Image.find({});
 
-    if (!images) {
+    if (!images ) {
       return res.status(404).send('Imagen no encontrada');
     }
 
