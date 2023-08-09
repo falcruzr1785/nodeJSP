@@ -75,7 +75,7 @@ controller.images = async (req, res) => {
     if (!images ) {
       return res.status(404).send('Imagen no encontrada');
     }
-
+  ////ruta para ver imagenes por medio de un arreglo
      // Suponiendo que la imagen está almacenada en la base de datos como un campo "data"
     // y que su tipo MIME es "image/jpeg"
      // Crear un arreglo para almacenar las imágenes en formato base64
